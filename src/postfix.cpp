@@ -3,7 +3,7 @@
 #include "postfix.h"
 #include "MyStack.h"
 
-std::string infix2prefix(std::string ArExpr) {
+std::string infix2postfix(std::string ArExpr) {
     std::string newExpr, space(" "), numbers = "0123456789.";
     ArExpr = ArExpr + space;
     MyStack<char> storage(999);
@@ -22,7 +22,7 @@ std::string infix2prefix(std::string ArExpr) {
             }
             if (storage.get() == '(')
                 storage.pop();
-        } else if ((ArExpr[i] == '/' ) || (ArExpr[i] == '*')) {
+        } else if ((ArExpr[i] == '/') || (ArExpr[i] == '*')) {
             while ((storage.isEmpty() == false) &&
 (storage.get() != '(') && (storage.get() != '+') &&
 (storage.get() != '-')) {
@@ -43,5 +43,5 @@ std::string infix2prefix(std::string ArExpr) {
     while (storage.isEmpty() == false) {
         newExpr = newExpr + storage.pop() + space;
     }
-	return newExpr;
+    return newExpr;
 }

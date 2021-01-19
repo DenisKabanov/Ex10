@@ -4,6 +4,6 @@
 #define INCLUDE_POSTFIX_H_
 #include <string>
 
-std::string infix2prefix(std::string ArExpr);
+std::string infix2postfix(std::string ArExpr);
 
 #endif  // INCLUDE_POSTFIX_H_
