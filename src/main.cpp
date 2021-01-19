@@ -1,6 +1,6 @@
 // Copyright 19.01.21 DenisKabanov
 
-#include "Mystack.h"
+#include "MyStack.h"
 #include "postfix.h"
 
 int main() {
