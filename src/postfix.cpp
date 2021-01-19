@@ -43,5 +43,6 @@ std::string infix2postfix(std::string ArExpr) {
     while (storage.isEmpty() == false) {
         newExpr = newExpr + storage.pop() + space;
     }
+    newExpr.erase(newExpr.length() - 1);
     return newExpr;
 }
